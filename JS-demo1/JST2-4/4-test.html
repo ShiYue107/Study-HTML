@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>用户登录验证</title>
+		<style type="text/css">
+			body{
+				font-size: 12px;
+			}
+			div#login{
+				margin: 0px auto;
+				width: 300px;
+			}
+			div#login fieldset{
+				border: 1px solid #ccc;
+				width: 230px;
+				height: 120px;
+				padding: 20px;
+			}
+			div#login fieldset legend{
+				margin-left:25px ;
+			}
+			div#login fieldset input{
+				border: 1px solid #ccc;
+			}
+			div#login fieldset input.txt{
+				width: 180px;
+			}
+		</style>
+	</head>
+	<body onkeypress="keyFun()">
+		<div id="login">
+			<form name="loginForm">
+				<fieldset>
+					<legend>用户登录</legend>
+					<p>
+						<label>邮箱：</label>
+						<input type="text" id="txtEmail" class="txt" />
+					</p>
+					<p>
+						<label>密码：</label>
+						<input type="password" id="txtPassword" class="txt" />
+					</p>
+					<p>
+						<input type="button" value="登录" onClick="checkLogin()" />
+						<a href="#">忘记密码了？</a>
+					</p>
+				</fieldset>
+			</form>
+		</div>
+		<script type="text/javascript">
+			function checkLogin(){
+				//获取邮箱
+				var userEmail=document.getElementById("txtEmail").value;
+				//获取密码
+				var userPwd=document.getElementById("txtPassword").value;
+				if (userEmail=="123456@qq.com"&&userPwd=="123456") {
+					alert("登录成功");
+				} else{
+					alert("登录失败");
+				}
+			}
+			function keyFun(){
+				var key=event.keyCode;
+				if (key==13) {
+					checkLogin();
+				}
+			}
+		</script>
+	</body>
+</html>

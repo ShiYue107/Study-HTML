@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			body{
+				border: 1px solid #dedede;
+				border-collapse:collapse ;
+				width: 100%;
+				clear: both;
+			}
+			tabl tr{
+				height: 50px;
+				border-bottom: 1px solid #dedede;
+			}
+			table td,th{
+				text-align: center;
+				vertical-align: middle;
+			}
+			table td.itme{
+				width: 400px;
+				height: 60px;
+				text-align: left;
+			}
+			table td.itme img{
+				margin-right: 10px;
+				vertical-align: middle;
+			}
+			table tr td.cal{
+				text-align: right;
+			}
+			table tr td.cal span{
+				font: bold 25px geneva,verdana,sans-serif;
+				color: orange;
+			}
+			table .btn{
+				border: 1px solid #DEDEDE;
+				background-color: white;
+				width: 16px;
+				height: 16px;
+			}
+			table .txt{
+				width: 60px;
+				background-color: 30px;
+				border: 1px solid #DEDEDE;
+				text-align: center;
+				font: bold 15px/30px geneva,verdana,sans-serif;
+			}
+			table .txt:hover{
+				border: 1px solid red;
+			}
+		</style>
+		<script type="text/javascript" src="js/jquery-3.3.1.min.js" ></script>
+		<script type="text/javascript">
+			$(function(){
+				//在增加数量的按钮上绑定事件
+				$(".btnAdd").click(function(){
+					var txtObj=$(this).siblings("input[type='text']");
+					console.log(txtObj);
+					var number =parseInt(txtObj.val());
+					txtObj.val(number+1);
+					calTotalPrice();
+				});
+				//在减少数量的按钮上绑定事件
+				$(".btnMinus").click(function(){
+					var txtObj=$(this).siblings("input[type='text']");
+					var number =parseInt(txtObj.val());
+					if(number>1){
+						txtObj.val(number-1);
+						calPrice($(this),number-1);
+						calTotalPrice();
+					}
+				});
+				//参数$btnObj代表增减数量的按钮，number是商品数量
+				function calPrice($btnObj,number){
+					var $btnObj=$btnObj.parent().next();
+					var price=parseFloat($btnObj.text().substr(1));
+					var $tdTotal=$btnObj.next();
+					var total=price*number;
+					$($tdTotal).html("&yen;"+total.toFixed(2));
+				}
+				//计算所有商品列表中所有商品的总价格
+				function calTotalPrice(){
+					var sum=0;
+					$("td[title='price']").each(function(index,element){
+						sum+=parseFloat($(this).text().substr(1));
+					});
+					$("#spanTotal").html("&yen;"+sum.toFixed(2));
+				}
+			});
+		</script>
+	</head>
+	<body>
+		<table id="tabOrder">
+			<tr>
+				<th>项目</th>
+				<th>状态</th>
+				<th>类型/数量</th>
+				<th>单价</th>
+				<th>小计</th>
+			</tr>
+			<tr>
+				<td class="itme">
+					<a href="#"><img src="img/item1.jpg" align="left"/>
+						欢乐空间量版式KTV:欢唱2选1，巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉
+					</a>
+				</td>
+				<td>可购买</td>
+				<td>
+					<input type="button" value="-" class="btn btnMinus" />
+					<input type="text" value="1" class="txt" disabled="disabled" />
+					<input type="button" value="+" class="btn btnAdd" />
+				</td>
+				<td>&yen;39.9</td>
+				<td title="price">&yen;39.9</td>
+			</tr>
+			<tr>
+				<td class="itme">
+					<a href="#"><img src="img/item2.jpg" align="left"/>
+						途乐时尚主题量版式KTV:任选唱1小时，巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉
+					</a>
+				</td>
+				<td>可购买</td>
+				<td>
+					<input type="button" value="-" class="btn btnMinus" />
+					<input type="text" value="1" class="txt" disabled="disabled" />
+					<input type="button" value="+" class="btn btnAdd" />
+				</td>
+				<td>&yen;59.9</td>
+				<td title="price">&yen;59.9</td>
+			</tr>
+			<tr>
+				<td colspan="5" class="cal">
+					已选<span>2</span>件商品 应付总额：<span id="spanTotal">&yen;99.8</span>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

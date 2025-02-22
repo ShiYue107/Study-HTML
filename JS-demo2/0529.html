@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>图片计时器</title>
+		<script type="text/javascript">
+			function $(id){
+				return document.getElementById(id);
+			}
+			
+			var timer;
+			var l=0,r=0;
+			function doStart(){
+				$("start").disabled=true;
+				$("stop").disabled=false;
+				timer=setInterval(function(){
+					r++;
+					if (r>9) {
+						r=0;
+						l++;
+					}
+					if (l>9) {
+						l=0;
+						r=0;
+					}
+					$("imgr").src="img/"+r+".bmp";
+					$("imgl").src="img/"+l+".bmp";
+					
+				},100);
+			}
+			
+			function doStop(){
+				$("start").disabled=false;
+				$("stop").disabled=true;
+				clearInterval(timer);
+			}
+		</script>
+		
+	</head>
+	<body>
+		<table>
+			<tr>
+				<td><img src="img/0.bmp" id="imgl"></td>
+				<td><img src="img/0.bmp" id="imgr"></td>
+			</tr>
+			<tr>
+				<td><button id="start" onclick="doStart()">开始</button></td>
+				<td><button id="stop" onclick="doStop()" disabled>停止</button></td>
+			</tr>
+		</table>
+	</body>
+</html>

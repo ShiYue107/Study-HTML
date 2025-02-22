@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<p id="txt"></p>
+		<img id="img" />
+		<script type="text/javascript">
+			window.onload=function(){
+				var url=window.location.href;
+				if (isMobile()) {
+					if (url.indexOf("4-test.html")>0) {
+						window.location.href="m.4-test.html"
+					}
+				} else{
+					if (url.indexOf("4-test.html")>0) {
+						window.location.href="4-test.html"
+					}
+				}
+				if (window.screen.availHeight>1280) {
+					document.getElementById("txt").innerHTML="屏幕可用高度大于1280px,使用大图片";
+					document.getElementById("img").src="img/fcz.jpg";
+				}else{
+					document.getElementById("txt").innerHTML="屏幕可用高度小于1280px,使用小图片";
+					document.getElementById("img").src="img/fcz.jpg";
+				}
+			}
+			function isMobile(){
+				var userAgentinfo=navigator.userAgent.toLocaleLowerCase();
+				var agents=["android","iphone","symbianos","widnows","phone","ipad"];
+				for (var i = 0; i < agents.length; i++) {
+					if(userAgentinfo.indexOf(agents[i])>0){
+						return true;
+					}
+				}
+				return false;
+			}
+		</script>
+	</body>
+</html>

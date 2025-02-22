@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>信息管理</title>
+	</head>
+	<body>
+		<table border="1" id="tb">
+			<tr>
+				<td>姓名</td>
+				<td>性别</td>
+				<td>年龄</td>
+				<td>班级</td>
+				<td>电话</td>
+				<td>操作</td>
+			</tr>
+			<tr>
+				<td>张三</td>
+				<td>男</td>
+				<td>25</td>
+				<td>软件1班</td>
+				<td>138*****0987</td>
+				<td><a href="#" onclick="del(this)">删除</a></td>
+			</tr>
+			<tr>
+				<td>李四</td>
+				<td>女</td>
+				<td>24</td>
+				<td>软件2班</td>
+				<td>133*****9987</td>
+				<td><a href="#" onclick="del(this)">删除</a></td>
+			</tr>
+			<tr>
+				<td>王五</td>
+				<td>男</td>
+				<td>26</td>
+				<td>计科1班</td>
+				<td>132*****0987</td>
+				<td><a href="#" onclick="del(this)">删除</a></td>
+			</tr>
+			<tr>
+				<td>赵六</td>
+				<td>女</td>
+				<td>23</td>
+				<td>计科2班</td>
+				<td>188*****0287</td>
+				<td><a href="#" onclick="del(this)">删除</a></td>
+			</tr>
+		</table>
+		<p>
+			<input type="text" id="name" placeholder="请输入姓名" />
+			<select>
+				<option>男</option>
+				<option>女</option>
+			</select>
+			<input type="text" id="age" placeholder="请输入年龄" />
+			<input type="text" id="cls" placeholder="请输入班级" />
+			<input type="text" id="mobile" placeholder="请输入手机号" />
+			<input type="button" value="插入数据" onclick="insert()" />
+		</p>
+		<script type="text/javascript">
+			function insert(){
+				var sel=document.getElementsByTagName("select")[0];
+				var gender=sel.options[sel.selectedIndex].text;
+				var age=document.getElementById("age").value;
+				var cls=document.getElementById("cls").value;
+				var mobile=document.getElementById("mobile").value;
+				var name=document.getElementById("name").value;
+				var array=new Array(name,gender,age,cls,mobile);
+				var tb=document.getElementById("tb");
+				var cols=tb.getElementsByTagName("th");
+				var newtr=document.createElement("tr");
+				for (var i = 0; i < cols.length; i++) {
+					if (i==cols.length-1) {
+						var td=document.createElement("td");
+						var a=document.createElement("a");
+						a.innerHTML="删除";
+						a.onclick=function(){
+							a.parentNode.parentNode.parentNode.removeChild(
+								a.parentNode.parentNode);
+						}
+						a.setAttribute("href","#");
+						td.appendChild(a);
+						newtr.appendChild(td);
+					} else{
+						var td=document.createElement("td");
+						td.innerHTML=array[i];
+						newtr.appendChild(td);
+					}
+				}
+				tb.appendChild(newtr);
+			}
+			function del(obj){
+				var tr=obj.parentNode.parentNode;
+				if (tr!=null) {
+					tr.parentNode.removeChild(tr);
+				}
+			}
+		</script>
+	</body>
+</html>
