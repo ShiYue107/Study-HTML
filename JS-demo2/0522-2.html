@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			button{
+				width: 50px;
+				height: 30px;
+			}
+		</style>
+		<script type="text/javascript">
+			function $(id){
+				return document.getElementById(id);
+			}
+			function jis(ysf){
+				switch (ysf){
+					case '+':
+						$("jg").value = Number($("n1").value)+Number($("n2").value);
+						break;
+					case '-':
+						$("jg").value = Number($("n1").value)-Number($("n2").value);
+						break;
+					case '*':
+						$("jg").value = Number($("n1").value)*Number($("n2").value);
+						break;
+					case '/':
+						$("jg").value = Number($("n1").value)/Number($("n2").value);
+						break;
+					default:
+						break;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		第一个数<input type="text" id="n1" /><br /><br />
+		第二个数<input type="text" id="n2" /><br /><br />
+		<button onclick="jis('+')">+</button>
+		<button onclick="jis('-')">-</button>
+		<button onclick="jis('*')">*</button>
+		<button onclick="jis('/')">/</button><br /><br />
+		结果<input type="text" id="jg" disabled/>
+	</body>
+</html>

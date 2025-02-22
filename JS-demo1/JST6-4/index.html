@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.3.1.min.js" ></script>
+		<script type="text/javascript">
+			$(function(){
+				$(":input").click(function(){
+					$(":header").css("color","red");
+					$(":header+ul").css("list-style","url(img/2000_1a0450d109ba9ce7e67430fe24ea3358.jpg)");
+					$(":header+ul>li>ul").css("list-style","url(img/2000_28f3bdcde3ccb884915dc48f8decfdd5.jpg)");
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h2>Web前端技术</h2>
+		<ul>
+			<li>
+				<ul>使用DIV+CSS设计前端页面
+					<li>页面布局</li>
+					<li>美化页面</li>
+					<li>页面特效</li>
+				</ul>
+			</li>
+			<li>
+				<ul>使用JavaScript+jQuery制作页面特效
+					<li>JavaScript基础</li>
+					<li>jQuery选择器</li>
+					<li>jQuery操作</li>
+				</ul>
+			</li>
+		</ul>
+		<p><input type="button" value="更改样式"/></p>
+	</body>
+</html>

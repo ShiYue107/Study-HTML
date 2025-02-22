@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function change(){
+				if ($("sogou").checked) {
+					$("logo").src="img/sogou.png";
+					$("frm").action="https://www.sogou.com/web";
+					$("txt").name="query";
+					$("btn").value="搜狗搜索";
+				}
+				if ($("360").checked) {
+					$("logo").src="img/360.png";
+					$("frm").action="https://www.so.com/s";
+					$("txt").name="q";
+					$("btn").value="360搜索";
+				}
+				if ($("baidu").checked) {
+					$("logo").src="img/baidu.png";
+					$("frm").action="https://www.baidu.com/s";
+					$("txt").name="wd";
+					$("btn").value="百度搜索";
+				}
+				if ($("bing").checked) {
+					$("logo").src="img/bing.png";
+					$("frm").action="https://cn.bing.com/search";
+					$("txt").name="q";
+					$("btn").value="bing搜索";
+				}
+			}
+			function $(id){
+				return document.getElementById(id);
+			}
+		</script>
+		<style type="text/css">
+			#logo{
+				width: 25px;
+				height: 25px;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="radio" name="search" id="baidu" onclick="change()" checked/><label for="baidu">百度</label>
+		<input type="radio" name="search" id="sogou" onclick="change()" /><label for="sogou">搜狗</label>
+		<input type="radio" name="search" id="360" onclick="change()" /><label for="360">360</label>
+		<input type="radio" name="search" id="bing" onclick="change()" /><label for="bing">bing</label>
+		
+		<form action="https://www.baidu.com/s" id="frm">
+			<img src="img/baidu.png" id="logo"/>
+			<input type="text" placeholder="请输入搜索关键字" name="wd" id="txt"/>
+			<input type="submit" value="百度搜索" id="btn"/>
+		</form>
+	</body>
+</html>

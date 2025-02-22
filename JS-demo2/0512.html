@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript">
+			// 输出十次人间值得！
+			// var i = 0;
+			// while (i<10){
+			// 	document.write("人间值得！");
+			// 	i++;
+			// }
+			
+			// 计算1-100的值
+			// var conter = 0;
+			// var sum = 0;
+			// while (conter<=100){
+			// 	sum+=conter;
+			// 	conter++;
+			// }
+			// alert(sum)
+			
+			//10-50之间的奇数和
+			// var conter=10;
+			// var sum=0;
+			// while (conter<=50){
+			// 	if ((conter%2)!==0) {
+			// 		sum+=conter;
+			// 	}
+			// 	conter++;
+			// }
+			// alert(sum)
+			
+			// 1-200能被7整除，但是不能被4整除
+			// var i = 0;
+			// var zs = 0;
+			// while (i<=200){
+			// 	if ((i%7==0)&&(i%4!==0)) {
+			// 		document.write(i+"&nbsp;&nbsp;")
+			// 		zs++;
+			// 		if (zs%5==0) {
+			// 			document.write("<br/>")
+			// 		}
+			// 	}
+			// 	i++;
+			// }
+			// alert("总数："+zs);
+			 
+			// 
+			//不是三角形a+b<c ||a+c<b||b+c<a
+			// var a = Number(prompt("请输入三角形的第一条边"));
+			// while (a<=0||a>100||isNaN(a)){
+			// 	a = Number(prompt("输入有误，请输入三角形的第一条边"));
+			// }
+			// var b = Number(prompt("请输入三角形的第二条边"));
+			// while (b<=0||b>100||isNaN(b)){
+			// 	b = Number(prompt("输入有误，请输入三角形的第二条边"));
+			// }
+			// var c = Number(prompt("请输入三角形的第三条边"));
+			// while (c<=0||c>100||isNaN(c)){
+			// 	c = Number(prompt("输入有误，请输入三角形的第三条边"));
+			// }
+			// if (a+b<c||a+c<b||b+c<a) {
+			// 	alert("这不是三角形");
+			// }else if (a==b||a==c||b==c) {
+			// 	alert("这是等腰三角形");
+			// }else if ((a==b&&a*a+b*b==c*c)||(a==c&&a*a+c*c==b*b)||(b==c&&b*b+c*c==a*a)) {
+			// 	alert("这是等边直角三角形");
+			// }else if (a*a+b*b==c*c||a*a+c*c==b*b||b*b+c*c==a*a) {
+			// 	alert("这是直角三角形");
+			// }else{
+			// 	alert("这是普通三角形");
+			// }
+			
+			// var a = Number(prompt("请输入一个正整数"))
+			// var num = "";
+			// while (a>0){
+			// 	num += a%10;
+			// 	a = parseInt(a/10);
+			// }
+			// alert(num)
+			
+			// var i=1;
+			// var sum=0;
+			// do{
+			// 	if (i%6==0) {
+			// 		sum+=i;
+			// 	}
+			// 	i++;
+			// }while(i<=50);
+			// alert(sum)
+			
+			// 让用户输入5个数
+			// var num = Number(prompt("请输入第1个数"));
+			// var max = num;
+			// var min = num;
+			// var cs = 1;
+			// do{
+			// 	cs++;
+			// 	num = Number(prompt("请输入第"+cs+"个数"));
+			// 	if(num>max){
+			// 		max=num;
+			// 	}
+			// 	if (num<min) {
+			// 		min=num;
+			// 	}
+			// }while(cs<5);
+			// alert("最大值："+max+"最小值："+min)
+			
+			// 让用户输入任意个数
+			var num = Number(prompt("请输入要比较的数"));
+			var max = num;
+			var min = num;
+			var flag = true;
+			do{
+				num = prompt("请输入要比较的数/【q】结束输入");
+				if (isNaN(num)&&num=="q") {
+					flag=false;
+				}else{
+					if(Number(num)>max){
+						max=Number(num);
+					}
+					if (Number(num)<min) {
+						min=Number(num);
+					}
+				}
+			}while(flag);
+			alert("最大值："+max+"最小值："+min)
+			
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>
