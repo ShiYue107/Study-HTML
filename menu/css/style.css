@@ -1,0 +1,41 @@
+*{
+	padding: 0px;
+	margin: 0px;
+	width: 200px;
+}
+.baio{
+	list-style: none;
+	margin-left: 30px;
+	padding-top:5px;
+}
+h4{
+	background-color: #eeeeee;
+	line-height: 25px;
+	margin-top: 5px;
+	margin-left: 0px;
+}
+span{
+	margin-left: 30px;
+}
+li{
+	padding-top: 2px;
+}
+a{
+	text-decoration: none;
+}
+.box:hover h4{
+	background-color:orangered;
+	color: white;
+}
+.box1:hover h4{
+	background-color:lightblue;
+	color: white;
+}
+.box2:hover h4{
+	background-color:lightgreen;
+	color: white;
+}
+
+a:hover{
+	color: lightblue;
+}

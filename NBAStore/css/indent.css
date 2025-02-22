@@ -1,0 +1,241 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family: "微软雅黑";
+}
+.clear{
+	clear: both;
+}
+#top{
+	height: 120px;
+	background-color: #0a3665;
+}
+#top-logo{
+	display: block;
+	margin-left: 110px;
+	margin-top: 45px;
+	float: left;
+}
+#top-content{
+	border-radius: 5px;
+	height: 35px;
+	width: 530px;
+	float: left;
+	background-image: url(../img/index-1/search-icon.png);
+	background-repeat:no-repeat ;
+	background-size: 30px 30px;
+	background-position:right ;
+	margin-left:120px;
+	margin-top: 55px;
+	
+}
+#top-right{
+	width: 330px;
+	height: 100px;
+	margin-left: 1070px;
+	padding-top: 10px;
+}
+#top-right-top{
+	color: white;
+	padding-left: 5px;
+}
+#top-right-top a{
+	color: white;
+	text-decoration:none ;
+}
+#top-right-foont{
+	margin-top: 40px;
+	margin-left: 75px;
+}
+#top-right-foont a{
+	color: white;
+	font-size: 20px;
+}
+#menu{
+	height: 43px;
+	background-color: #0769b2;
+	padding-left: 100px;
+}
+#menu ul li {
+	float: left;
+	list-style: none;
+	padding-left: 15px;
+	width: 85px;
+	height: 43px;
+	line-height: 43px;
+}
+#menu ul li a{
+	color: white;
+	font-size: 18px;
+}
+#menu-bg{
+	background-image: url(../img/index-1/nike-logo.png);
+	background-repeat:no-repeat ;
+	background-size: 100px 30px;
+	background-position:0px 5px ;
+}
+#menu ul li:hover{
+	background-color:#0a3665;
+}
+#menu ul li a{
+	text-decoration: none;
+}
+#content{
+	height: 750px;
+	width: 1518px;
+	background-image:url(../img/imgHome/bg.jpg) ;
+	background-repeat-y: ;
+	
+}
+#content-box{
+	background-color: #FFFFFF;
+	height: 750px;
+	width: 1440px;
+	margin: auto;
+	box-shadow: 0px 10px 10px 5px gray;
+}
+#content-box-left{
+	float: left;
+	margin-top: 30px;
+	margin-left: 40px;
+	height: 400px;
+	width: 600px;
+}
+#content-box-right{
+	float: left;
+	margin-top: 100px;
+	margin-left: 40px;
+	height: 400px;
+	width: 700px;
+}
+#content-box-right-top{
+	height: 45px;
+	font-size: 24px;
+	padding-top: 5px;
+	padding-left: 60px;
+}
+.text{
+	font-size: 20px;
+	padding-left: 220px;
+}
+#input-1{
+	height: 30px;
+	margin-top: 30px;
+}
+#input-2{
+	height: 30px;
+	margin-top: 30px;
+}
+#input-3{
+	height: 30px;
+	margin-top: 30px;
+}
+#input-4{
+	height: 30px;
+	margin-top: 30px;
+}
+#input-5{
+	background-color: yellow;
+	height: 30px;
+	width: 80px;
+	margin-top: 30px;
+	margin-left:300px ;
+}
+#bottom{
+	background-color: #0a3665;
+	height: 493px;
+}
+#bottom-top{
+	height: 340px;
+	border-bottom:3px solid white;
+	float: left;
+	margin-left: 65px;
+}
+#bottom-top-1{
+	width: 250px;
+	height: 270px;
+	float: left;
+	padding-left: 20px;
+	padding-top: 60px;
+}
+#bottom-top-2{
+	width: 300px;
+	height: 330px;
+	float: left;
+	margin-left: 60px;
+	margin-top: 10px;
+}
+#bottom-top-2 ul li{
+	width: 110px;
+	list-style: none;
+	margin-top: 40px;
+	margin-left: 50px;
+}
+#bottom-top-2 ul li a{
+	text-decoration: none;
+	color: white;
+	font-size: 17px;
+}
+#bottom-top-3{
+	width: 250px;
+	height: 290px;
+	float: left;
+	margin-left: 60px;
+	padding-left: 50px;
+	padding-top: 40px;
+	color: white;
+}
+#bottom-top-3-top{
+	width: 100px;
+	height: 100px;
+	margin-top: 10px;
+}
+#bottom-top-3-dwon{
+	width: 100px;
+	height: 100px;
+	margin-top: 10px;
+}
+#bottom-top-4{
+	width: 300px;
+	height: 300px;
+	float: left;
+	margin-left: 60px;
+	color: white;
+	padding-top: 30px;
+}
+#bottom-top-4 ul li{
+	list-style: none;
+	width: 220px;
+	height: 30px;
+	margin-top: 20px;
+	margin-left: 50px;
+}
+#bottom-dwon{
+	height: 130px;
+	margin-left: 65px;
+	padding-top: 20px;
+}
+#bottom-dwon-1{
+	color: white;
+}
+#bottom-dwon-1 a{
+	text-decoration: none;
+	color: white;
+}
+#bottom-dwon-2{
+	color: white;
+	margin-top: 10px;
+}
+#bottom-dwon-2 a{
+	text-decoration: none;
+	color: white;
+}
+#bottom-dwon-3{
+	color: white;
+	margin-top: 10px;
+}
+#bottom-dwon-4{
+	color: white;
+	margin-top: 10px;
+}
+/*content在83行*/

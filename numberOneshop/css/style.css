@@ -1,0 +1,219 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family: "微软雅黑";
+	font-size: 16px;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+#header{
+	height: 87px;
+	width: 100px;
+}
+#header-logo{
+	width: 190px;
+	margin-left: 355px;
+	margin-top: 12px;
+	float: left;
+}
+#header-login{
+	width: 400px;
+	height: 50px;
+	float: left;
+	margin-left: 960px;
+	margin-top: -70px;
+}
+#header-login-font{
+	width: 200px;
+	height: 25px;
+	float: left;
+	font-size: 14px;
+	color: #999999;
+}
+#header-login-font a{
+	color:#0066cc ;
+}
+#header-login-help{
+	width: 100px;
+	height: 25px;
+	float: left;
+	margin-left: 90px;
+	font-size: 12px;
+	background-image: url(../img/runbun.png),url(../img/turnb.png);
+	background-repeat: no-repeat,no-repeat;
+	background-position: 5px 5px,80px 5px;
+	color: black;
+	text-align:center ;
+	line-height:25px ;
+}
+#conter{
+	height: 430px;
+	background-color: #fcfcfc;
+}
+#conter-big{
+	height: 430px;
+	width: 1000px;
+	margin: 0px auto;
+}
+#conter-big-left{
+	height: 420px;
+	width: 510px;
+	float: left;
+}
+#conter-big-right{
+	height: 370px;
+	width: 333px;
+	float: left;
+	margin-top: 50px;
+	margin-left: 120px;
+}
+#conter-big-right-1{
+	color: #666666;
+}
+#conter-big-right-2 a{
+	margin-left: 150px;
+	color: #0066cc;
+}
+#conter-big-right-3{
+	height: 54px;
+	width: 330px;
+	margin-top: 10px;
+}
+#conter-big-right-3-1{
+	height: 53px;
+	width: 288px;
+	padding-left: 40px;
+	background-image: url(../img/userHead.png);
+	background-repeat: no-repeat;
+	background-position: 10px 15px;
+}
+#conter-big-right-4{
+	height: 54px;
+	width: 330px;
+	margin-top: 10px;
+}
+#conter-big-right-4-1{
+	height: 53px;
+	width: 288px;
+	padding-left: 40px;
+	background-image: url(../img/lock.png);
+	background-repeat: no-repeat;
+	background-position: 7px 12px;
+}
+#conter-big-right-5{
+	width: 110px;
+	margin-top: 10px;
+	float: left;
+	font-size: 14px;
+	color: #a6a1a1;
+}
+#conter-big-right-5-1 a{
+	width: 75px;
+	margin-top: 10px;
+	float: left;
+	margin-left: 140px;
+	font-size: 14px;
+	color: #a6a1a1;
+}
+#conter-big-right-6{
+	background-color: #ff3c3c;
+	color: white;
+	font-size: 16px;
+	font-weight: bold;
+	height: 54px;
+	width: 328px;
+	margin-top: 10px;
+	text-align: center;
+	line-height: 54px;
+}
+#conter-big-right-7{
+	height: 25px;
+	margin-top: 10px;
+	font-size: 14px;
+	color: #a6a1a1;
+}
+#conter-big-right-8{
+	height: 50px;
+	width: 220px;
+	float: left;
+}
+#conter-big-right-8 ul li{
+	height: 49px;
+	width: 53px;
+	float: left;
+}
+#conter-big-right-8-right a{
+	height: 25px;
+	width: 100px;
+	font-size: 14px;
+	float: left;
+	margin-left: 5px;
+	margin-top: 15px;
+	background-image: url(../img/turnb.png);
+	background-repeat: no-repeat;
+	background-position: 85px 2px;
+	
+}
+#conter-big-right-8-1{
+	background-image: url(../img/qqf.png);
+	background-repeat: no-repeat;
+	background-size: 50px 50px;
+}
+#conter-big-right-8-2{
+	background-image: url(../img/wbf.png);
+	background-repeat: no-repeat;
+	background-size: 50px 50px;
+}
+#conter-big-right-8-3{
+	background-image: url(../img/zhif.png);
+	background-repeat: no-repeat;
+	background-size: 50px 50px;
+}
+#conter-big-right-8-4{
+	background-image: url(../img/wxf.png);
+	background-repeat: no-repeat;
+	background-size: 50px 50px;
+}
+#conter-big-right-8-1:hover{
+	background-image: url(../img/qqt.png);
+	background-repeat: no-repeat;
+	background-size: 50px 50px;
+}
+#conter-big-right-8-2:hover{
+	background-image: url(../img/wbt.png);
+	background-repeat: no-repeat;
+	background-size: 50px 50px;
+}
+#conter-big-right-8-3:hover{
+	background-image: url(../img/zhit.png);
+	background-repeat: no-repeat;
+	background-size: 50px 50px;
+}
+#conter-big-right-8-4:hover{
+	background-image: url(../img/wxt.png);
+	background-repeat: no-repeat;
+	background-size: 50px 50px;
+}
+.lear{
+	clear: both;
+}
+#foonter{
+	height: 90px;
+	background-color: #fcfcfc;
+}
+#foonter-1{
+	height: 45px;
+	width: 1000px;
+	margin: 0px auto;
+	text-align: center;
+}
+#foonter-2{
+	height: 45px;
+	width: 1000px;
+	margin: 0px auto;
+	text-align: center;
+}
