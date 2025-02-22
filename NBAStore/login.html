@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0px;
+				padding: 0px;
+				font-family: "微软雅黑";
+			}
+			h2{
+				color: steelblue;
+			}
+			.welcome{
+				margin-left: 20px;
+			}
+			#left{
+				width: 500px;
+				height: 500px;
+				float: left;
+				margin-top: 45px;
+			}
+			#right{
+				width: 600px;
+				height: 600px;
+				float: right;
+				margin-right: 100px;
+				background: ghostwhite;
+				
+			}
+			.registered{
+				font-size: 20px;
+				color:steelblue ;
+				margin-left: 20px;
+			}
+			.old{
+				font-size: 10px;
+				color: darkgrey;
+				margin-left: 20px;
+			}
+			.new{
+				width: 300px;
+				height: 30px;
+				color: crimson;
+				margin-top: 25px;
+				margin-left: 50px;
+				
+			}
+			.new-registered{
+				font-size:10px ;
+				color: darkgrey;
+				display: block;
+				margin-top: -20px;
+				
+			}
+			#form{
+				margin-left: 50px;
+				margin-top: 30px;
+			}
+			.forget a{
+				color: gray;
+				font-size: 10px;
+			}
+			.remember{
+				color: gray;
+				font-size: 10px;
+			}
+			#right-form{
+				width: 400px;
+				height: 500px;
+				margin-left: 80px;
+				margin-top: 30px;
+			}
+			.agree{
+				font-size: 10px;
+				color: gray;
+			}
+			.agree a{
+				color: palevioletred;
+			}
+			#textbox{
+				width: 200px;
+				height: 25px;
+			}
+			#small{
+				width: 100px;
+				height: 25px;
+			}
+			.picture{
+				margin-right: 10px;
+				margin-left: 5px;
+			}
+			.chage{
+				font-size: 15px;
+				width: 30px;
+				margin-right: 20px;
+			}
+			#button{
+				border: 1px solid blue;
+				width:100px ;
+				height: 30px;
+				color: darkblue;
+				margin-left: 5px;
+			}
+			#submit{
+				color: white;
+				width: 160px;
+				height: 40px;
+				background-color: blue;
+				border-radius: 8px;
+			}
+			#foot{
+				margin-left: 150px;
+				margin-top: 30px;
+			}
+			#left-foot{
+				margin-left: 130px;
+				margin-top: 10px;
+			}
+			#maune{
+				margin-top: 10px;
+				margin-left: 180px;
+			}
+			.font{
+				font-size: 10px;
+				color: darkgrey;
+			}
+			ul{
+				list-style: none;
+			}
+			li{
+				float: left;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<h2 class="welcome">欢迎登录NBA Store.</h2>
+			<div id="left">
+				<span class="registered">已注册用户</span><br />
+				<span class="old">已有NBA球迷圈账号，请使用注册手机号码登录<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;首次登录即可获得9折优惠券</span>
+				<div id="form">
+					<form>
+						<table border="0" cellpadding="0" cellspacing="0">
+							<tr>
+								<td>*手机号码<br/>(NBA账号）</td>
+								<td colspan="2" width="180" height="60"><input id="textbox" type="text" size="25"/></td>
+							</tr>
+							<tr>
+								<td align="center">*密码</td>
+								<td colspan="2" width="180" height="40"><input id="textbox" type="password" size="25"</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td class="forget" align="left"><a href="#">忘记密码</a></td>
+								<td align="right"><input type="checkbox"/><span class="remember">记住用户名</span></td>
+							</tr>
+						</table>
+					</form>
+					<div id="left-foot">
+						<a href="Home.html"><input id="submit" type="submit" value="登录" /></a>
+					</div>
+				</div>
+				<div id="maune">
+					<span class="font">您还可以用以下方式登录：</span>
+					<ul>
+						<il><a href="#"><img src="img/index-1/QQ图片20200218185514.png" width="40px" height="40px"/></a></il>
+						<il><a href="#"><img src="img/index-1/QQ图片20200218185444.png" width="40px" height="40px"/></a></il>
+						<il><a href="#"><img src="img/index-1/QQ图片20200218185458.png" width="40px" height="40px"/></a></il>
+					</ul>
+				</div>
+			</div>
+			<div id="right">
+				<div class="new"><h3>新用户注册（创建NBA球迷圈账号)</h3><br/>
+					<span class="new-registered">新用户首次注册，即可获得9折优惠券</span>
+				</div>
+				<div id="right-form">
+					<form>
+						<table border="0" cellpadding="0" cellspacing="0">
+							<tr>
+								<td align="right">*手机号码&nbsp;&nbsp;</td>
+								<td colspan="2" width="160" height="60"><input id="textbox"  type="text" size="25" /></td>
+							</tr>
+							<tr>
+								<td align="right">*验证码&nbsp;&nbsp;</td>
+								<td  height="60" ><input id="small" type="text"  /></td>
+								<td align="left"><img class="picture" src="img/index-1/QQ图片20200218185523.jpg" height="25" width="70"/>
+									<a class="chage" href="#">换一张</a>
+								</td>
+							</tr>
+							<tr>
+								<td align="right">*手机验证码&nbsp;&nbsp;</td>
+								<td height="60"><input id="small" type="text" size="20"/></td>
+								<td><input id="button" type="button" value="获取验证码"/></td>
+							</tr>
+							<tr>
+								<td align="right">*密码&nbsp;&nbsp;</td>
+								<td colspan="2" height="60" ><input id="textbox" type="password" placeholder="请输入8~16位的字母或者数字" size="25"/></td>
+							</tr>
+							<tr>
+								<td align="right">*确认密码&nbsp;&nbsp;</td>
+								<td colspan="2" height="60" ><input id="textbox" type="password" placeholder="请输入8~16位的字母或者数字" size="25"</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td colspan="2" height="60"><input type="checkbox"/><span class="agree">我已阅读并遵守<a href="#"><b>使用条款</b></a>，
+									<a href="#"><b>隐私政策</b></a>和<a href="#"><b>球迷圈<br />&nbsp;&nbsp;条款</b></a></span></td>
+							</tr>
+						</table>
+					</form> 
+					<div id="foot">
+						<a href="login.html"></a><input id="submit" type="submit" value="注册" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

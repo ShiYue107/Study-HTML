@@ -1,0 +1,32 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+a{
+	text-decoration: none;
+}
+body{
+	background-color: #f0f567;
+}
+h2{
+	width: 200px;
+	height: 50px;
+	margin-left: 700px;
+}
+h4{
+	width: 305px;
+	margin: auto;
+}
+#service{
+	background-color: black;
+	width: 85px ;
+	height: 50px;
+	margin-left:720px;
+	margin-top: 20px;
+	line-height: 50px;
+	padding-left: 15px;
+}
+#service a{
+	color: white;
+	font-size:18px ;
+}
