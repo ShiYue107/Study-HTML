@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM对象</title>
+</head>
+<body>
+
+    <div id="father">
+        <h1>我是h1</h1>
+        <p id="p1">我是p1段</p>
+        <p class="p2">我是p2段</p>
+    </div>
+    <script>
+        var p1 = document.getElementById('p1');
+        var father = document.getElementById('father');
+
+        father.removeChild(p1);
+        //动态删除，当下标为0的被删除是，会自动补位即下标为1的补到0
+        father.removeChild(father.children[0]);
+    </script>
+</body>
+</html>

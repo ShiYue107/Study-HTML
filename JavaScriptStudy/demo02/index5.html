@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>class对象</title>
+
+    <script>
+        class Student{
+            constructor(name) {
+                this.name=name;
+            }
+
+            hello(){
+                alert("hello!")
+            }
+        }
+        class xiaoStudent extends Student{
+            constructor(name,year) {
+                super(name);
+                this.year = year;
+            }
+
+            myYear(){
+                alert("我是小学生");
+            }
+        }
+        var xiaoming = new Student("xiaoming");
+        var xiaohong = new xiaoStudent("xiaohong",4);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

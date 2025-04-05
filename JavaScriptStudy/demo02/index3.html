@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>方法的定义及调用、apply</title>
+
+    <script>
+        'use strict';
+
+        function getAge(){
+            return new Date().getFullYear() - this.birth;
+        };
+        var xiaofeng = {
+            name:"小锋",
+            birth:2000,
+            hobby:['敲代码','研究计算机','爱美兰','听音乐'],
+        };
+        var xiaoming = {
+            name:"小明",
+            birth:1998,
+            hobby:['敲代码','看美女','打游戏','唱歌'],
+        };
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

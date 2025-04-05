@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>作用域</title>
+
+    <script>
+        'use strict';
+        function test1(){
+            let x = 1;
+            function inner() {
+                let y = x+1;
+                console.log('y'+y);
+            }
+            let z = y + 1;//y is not defined
+        }
+
+        function test2(){
+            var ab = 1;
+            function test2Inner(){
+                var ab = 'A';
+                console.log('inner==>'+ab);//inner==>A
+            }
+            test2Inner();
+            console.log('out==>'+ab);//out==>1
+        }
+
+        function f(){
+            var x = 'x' + y;
+            console.log(x);
+            var y = 'y';
+        }
+
+        var q = 1;
+        function t3(){
+            console.log(q);
+        }
+        console.log(q);
+
+
+        var ivanApp = [];
+
+        ivanApp.name = 'feng';
+        ivanApp.add = function (a,b){
+            return a+b;
+        }
+
+        for (var i = 0; i < 10; i++) {
+            console.log(i);
+        }
+        console.log(i);//输出10
+
+        const PI = '3.14';
+        console.log(PI);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
