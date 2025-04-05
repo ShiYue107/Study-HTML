@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>提交表单</title>
+    <!--MD5在线链接-->
+    <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+
+</head>
+<body>
+
+<form action="index.html" method="post" onsubmit="return abc()">
+    <p>
+        <span>username：</span><input type="text" id="username" name="username"/>
+    </p>
+    <p>
+        <span>password：</span><input type="password" id="out-password"/>
+    </p>
+    <p>
+        <input type="hidden" id="inner-password"/>
+    </p>
+    <p>
+        <button type="submit" onclick="aaa()">提交</button>
+    </p>
+
+    <script>
+        function abc(){
+            var username = document.getElementById('username');
+            var pwd = document.getElementById('out-password');
+
+            alert(username.value);
+            alert(pwd.value);
+            var newP = document.getElementById('inner-password');
+            newP.value = md5(pwd.value);
+            alert(newP.value)
+            return true;
+        };
+        function aaa(){
+            alert('按钮事件');
+        };
+    </script>
+
+</form>
+</body>
+</html>

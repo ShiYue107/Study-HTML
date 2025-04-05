@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对象</title>
+
+    <script>
+        var user = {
+            name:"",
+            age:0,
+            sex:"",
+            info:function (){
+                console.log(this.name,this.age,this.sex)
+            }
+        }
+        var xiaoming = {
+            name:"xiaoming",
+            age:22,
+            sex:"nv"
+        }
+        xiaoming.__proto__ = user;
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

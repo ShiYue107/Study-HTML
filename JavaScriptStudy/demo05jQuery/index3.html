@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jq事件</title>
+    <script src="lib/jquery-3.6.0.js"></script>
+
+    <style>
+        div{
+            border: red solid 1px;
+            width: 500px;
+            height: 600px;
+        }
+    </style>
+</head>
+<body>
+鼠标位置:<span id="mouseMove"></span>
+<div id="divMove">
+    在此区域活动
+</div>
+<script>
+    $(function (){
+        $('#divMove').mousemove(function (e){
+            $('#mouseMove').text('横坐标：'+e.pageX+'纵坐标：'+e.pageY);
+        });
+    });
+</script>
+</body>
+</html>

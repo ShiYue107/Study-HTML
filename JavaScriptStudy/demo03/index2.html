@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>InsertDOM</title>
+</head>
+<body>
+    <p id="js">JavaScript</p>
+    <div id="list">
+        <p id="se">JavaSE</p>
+        <p id="ee">JavaEE</p>
+        <p id="me">JavaME</p>
+    </div>
+    <script>
+        var js = document.getElementById('js');
+        var list = document.getElementById('list');
+        //将现有的id为js的节点插入到listDIV中
+        list.appendChild(js);
+        //新建节点 插入到listDIV中
+        var tomcat = document.createElement('p');
+        tomcat.setAttribute('id','tc');
+        tomcat.innerText='TomCat';
+        list.appendChild(tomcat);
+        //手动创建style标签并修改body背景颜色
+        var myStyle = document.createElement('style');
+        myStyle.innerText='body{background-color: red;}';
+        document.getElementsByTagName('head')[0].append(myStyle);
+    </script>
+</body>
+</html>
